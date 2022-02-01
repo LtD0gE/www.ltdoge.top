@@ -198,9 +198,9 @@
       
       <p class="h5">2022</p>
     
-    <a href="/2022/01/31/hello-world/" class="list-group-item list-group-item-action">
+    <a href="/2022/02/01/hello-world/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">Hello World</span>
-      <time style="float: right;">01-31</time>
+      <time style="float: right;">02-01</time>
     </a>
   
 </div>
@@ -282,6 +282,8 @@
 
 <!-- Plugins -->
 
+  <script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+
 
   <script  src="/js/local-search.js" ></script>
 
@@ -304,13 +306,13 @@
 
   <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
   <script>
-    (function (window, document) {
+    function slogan(window, document) {
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
         typing(title);
       
-    })(window, document);
+    }
   </script>
 
 
