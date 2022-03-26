@@ -1,0 +1,664 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="LtD0gE">
+  <meta name="keywords" content="LtD0gE">
+  
+    <meta name="description" content="0x00 此教程基于华为畅享10 Plus（STK-AL00）编写。不同机型请自行变换步骤。 搞机有风险！搞机有风险！搞机有风险！没有救砖基础不要硬上！刷砖作者不负责！ 众所周知，华为因其出色的保护机制让搞机佬们闻之色变。比如…   BL解锁困难（2018年解锁码获取通道就已关闭，麒麟平台甚至无解锁码）   system修改困难（较新款机型的system分区采用华为自研erofs，此文件系统天生">
+  
+  
+  <title>华为搞机佬の充实亿天 - D0gE博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"www.ltdoge.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="D0gE博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>D0gE博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://pic.imgdb.cn/item/6237de5827f86abb2a975c25.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="华为搞机佬の充实亿天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      LtD0gE
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-26 13:06" pubdate>
+        2022年3月26日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.8k 字
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">华为搞机佬の充实亿天</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年3月26日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="0x00"><a class="markdownIt-Anchor" href="#0x00"></a> 0x00</h1>
+<p class="note note-warning">此教程基于华为畅享10 Plus（STK-AL00）编写。不同机型请自行变换步骤。</p>
+<p class="note note-danger">搞机有风险！搞机有风险！搞机有风险！没有救砖基础不要硬上！刷砖作者不负责！</p>
+<p>众所周知，华为因其出色的保护机制让搞机佬们闻之色变。比如…</p>
+<ul>
+<li>
+<p>BL解锁困难（2018年解锁码获取通道就已关闭，麒麟平台甚至无解锁码）</p>
+</li>
+<li>
+<p>system修改困难（较新款机型的system分区采用华为自研erofs，此文件系统天生只读，也就是说镜像一旦打包完成就无法进行写入操作，无法重挂载为rw模式）</p>
+</li>
+<li>
+<p>分区编辑困难（华为的设备分区和安卓标准是毫不重合，比如没有boot分区，recovery分区分为了recovery_ramdisk_a、recovery_vendor_a、recovery_vbmeta_a三个部分，这在其它机型上从未有之）</p>
+</li>
+<li>
+<p>… …</p>
+<p>所以各位搞机佬买华为之前一定要慎重，搞机买华为就是折磨自己。</p>
+<p><img src="https://pic.imgdb.cn/item/623a72fc27f86abb2ac5dacd.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>但搞机佬无所畏惧  华为搞机走起</p>
+<p><img src="https://pic.imgdb.cn/item/623a75c327f86abb2ad4f2d3.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h1 id="0x01-解bl锁适用于麒麟平台"><a class="markdownIt-Anchor" href="#0x01-解bl锁适用于麒麟平台"></a> 0x01 解BL锁（适用于麒麟平台）</h1>
+<p>解BL锁之前我们要把手机降级到EMUI10版本以下，否则刷了无锁BL也没用。究其原因，应该是Android 10引入的“超级分区”机制允许手机厂商把启动代码写入动态分配的超级分区中，原来固化的fastboot分区被弃用。刷写超级分区里的fastboot应该也可以奏效，但我从EMUI9升级到EMUI10时升级失败，这事先鸽了。</p>
+<p>降级操作要通过华为手机助手进行，<a target="_blank" rel="noopener" href="https://consumer.huawei.com/cn/support/hisuite/">点此跳转下载界面</a>。</p>
+<p>下载华为手机助手后，点击“系统更新”：</p>
+<p><img src="https://pic.imgdb.cn/item/623a7c9027f86abb2af6be2c.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>在升级按钮旁边有“切换到其它版本”的选项，我们通过那个选项将手机一步步降级到EMUI9（我手机已经降级到最低版本，没法截图），注意不能使用HiSuite Proxy之类的软件从过高版本系统一键降级到EMUI9，华为对跨版本降级做了限制，必须一版版降级。</p>
+<p>前面提到，麒麟平台的华为是没有BL解锁码的，只能通过刷无锁BL解锁。</p>
+<p>我们需要两个软件：<a target="_blank" rel="noopener" href="https://hcu-client.com/">HCU Client</a>和<a target="_blank" rel="noopener" href="https://www.dc-unlocker.com/file-list/DC-unlocker_softwares/DC_Phoenix">DC-Phoenix</a>，两个软件都需要加密狗或账号认证。这里推荐去闲鱼或淘宝之类的平台租用HCU账号，HCU Timed License和DC-Phoenix License是通用的。</p>
+<p>然后，短接主板TP点进COM1.0模式。</p>
+<p>第一步要先拆开手机后盖，我的方案是热风枪温度200℃，风速开满，对着手机边缘吹四五分钟，吸盘吸出一条缝（别想着从边缘硬抠，搞不下来）后撬棒接上，拆开手机。没有热风枪的小伙伴可以用吹风机代替。</p>
+<p>拆后盖时要注意，如果你的手机是背部指纹，要注意保护指纹排线，搞断了就不好了。</p>
+<p>拆开后盖后，拧下上屏蔽罩的螺丝，露出上部主板。有背部指纹排线的机型要用撬棒断开排线接口。</p>
+<p><img src="https://pic.imgdb.cn/item/623a7a1127f86abb2aea736c.jpg" srcset="/img/loading.gif" lazyload alt="网图，拆自己手机时没法拍照。点我跳转图源" /></p>
+<p><strong>关机</strong>后，<a target="_blank" rel="noopener" href="http://www.shuajibang.net/news/detail/39124">点这里查找你的机型对应的短接图</a>，用金属镊子把那个点和旁边的屏蔽罩连起来。</p>
+<p><img src="https://pic.imgdb.cn/item/623a7e3627f86abb2afdf9cb.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>然后一手拿着镊子，一手长按电源键开机，约三秒后松开电源键。COM1.0模式下开机不振动。注意别插着数据线。</p>
+<p>接着把手机连上电脑，打开设备管理器，如果看到“USB SER&quot;的设备就说明短接成功。</p>
+<p><img src="https://pic.imgdb.cn/item/623a7f2827f86abb2a020588.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>不要急着打什么“牛逼驱动”，我打驱动打了一晚上都没搞好。</p>
+<p><img src="https://pic.imgdb.cn/item/623a7f7e27f86abb2a038df0.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>右键USB SER，点“更新驱动程序”→“浏览我的电脑以查找驱动程序”→“让我从计算机上可用的驱动程序列表中选取”→“端口（COM和LPT）”→厂商选“Huawei Incorporated”，驱动选“HUAWEI USB COM 1.0”。注意这里的驱动没有版本号。</p>
+<p><img src="https://pic.imgdb.cn/item/623a818027f86abb2a0b6d43.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>点下一页后，把弹出的不兼容提示关掉，驱动就正确安装了。下图表示COM1.0驱动已正确安装，图标上没有感叹号。</p>
+</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/623a81f627f86abb2a0dc0f4.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>然后打开HCU Client登录账号，模式选“Fastboot / Xloader (HiSilicon only)”，切换到第二个选项卡，选择你的CPU型号，把FBLOCK和Bootloader lock都选成unlocked。不要点Reboot after repair，待会还要用。</p>
+<p><img src="https://pic.imgdb.cn/item/623a84a827f86abb2a1a38e4.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>选好之后点“Repair”，软件会给手机刷一个无锁BL。至此BL解锁完成。</p>
+<h1 id="0x02-magisk-root"><a class="markdownIt-Anchor" href="#0x02-magisk-root"></a> 0x02 Magisk Root</h1>
+<p>用HCU的账号登录DC-Phoenix，进eMMC Dump选项卡，点Read selected partitions，然后Read partition list。</p>
+<p><img src="https://pic.imgdb.cn/item/623a853f27f86abb2a1c2df5.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>按住Ctrl键，然后点recovery_ramdisk_a、recovery_vbmeta_a、vbmeta_a，松开Ctrl键点Read partitions，软件会把这三个分区提取到软件根目录。我操作时引导验证自动关闭了，但为了防止出什么奇怪问题，还是提vbmeta重新关一下引导验证。</p>
+<p>提取完成后，我们可以长按电源键10秒重启，可以在Update by TP选项卡里点Reboot，也可以走以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">fastboot reboot<br></code></pre></td></tr></table></figure>
+<p>总之能重启就行。</p>
+<p>重启后手机打开ADB调试，把提取出来的recovery_ramdisk_a传到手机上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb push /path/to/recovery_ramdisk_a.img /storage/emulated/0/Download/<br></code></pre></td></tr></table></figure>
+<p>重启后<a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases/tag/v24.3">在GitHub Release界面下载Magisk的安装包</a>，在手机上通过Magisk修补镜像，这里不再赘述。</p>
+<p>修补完成后，我们把修补过的镜像拉下来：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb pull /storage/emulated/0/Download/magisk_patched.img /path/to/save.img<br></code></pre></td></tr></table></figure>
+<p>还是为防止出现什么奇怪问题，对于<strong>无法解FBLOCK</strong>（即HCU中输出Write FBLOCK for this model not supported）的机型，我推荐用DC-Phoenix刷临时无FBLOCK的BL。如果你认为你的机子有FBLOCK也可以动recovery、vbmeta这些东西…你可以逝一逝</p>
+<p><img src="https://pic.imgdb.cn/item/623a89c227f86abb2a314d59.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>打开DC-Phoenix，切换到Update by TP选项卡，点Load and temporally unlock bootloader</p>
+<p><img src="https://pic.imgdb.cn/item/623a8a9327f86abb2a34fa8e.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>在下边的Bootloader files里选你的CPU型号，然后Do job，软件会刷入一个无FBLOCK的BL，重启失效。</p>
+<p>用以下指令刷写patch过的recovery，顺便关闭引导验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#通过adb进入fastboot时注意，不能adb reboot fastboot。用户空间下的fastbootd在安卓10才引入。请adb reboot bootloader</span><br>fastboot flash recovery_ramdisk_a /path/to/save.img<br>fastboot --disable-verity --disable-verification flash vbmeta_a /path/to/vbmeta_a.img<br>fastboot --disable-verity --disable-verification flash recovery_vbmeta_a /path/to/recovery_vbmeta_a.img<br><span class="hljs-comment">#注意是verity不是verify</span><br><span class="hljs-comment">#别被_a后缀骗了，部分机型不支持AB槽</span><br>fastboot reboot<br></code></pre></td></tr></table></figure>
+<p>手机重启，打开Magisk App一看————</p>
+<p style="font-size: 2rem">wdnmd, 版本获取失败？Magisk没刷上？？</p>
+<p><img src="https://pic.imgdb.cn/item/623a8e1027f86abb2a434d67.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>我们的安装方式是“Magisk in Recovery”，按照官方文档，只有启动到Recovery时才会开启Magisk。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb reboot recovery<br></code></pre></td></tr></table></figure>
+<p>如果操作正确，这个指令会重启到系统，而不是Recovery。对了，这种方式安装的Magisk不能通过第三方rec升降级。</p>
+<p>现在打开Magisk App，就能获取到版本号了。</p>
+<p><img src="https://pic.imgdb.cn/item/623a8f5527f86abb2a48d8ad.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h1 id="0x03-system扩容失败-救砖"><a class="markdownIt-Anchor" href="#0x03-system扩容失败-救砖"></a> 0x03 system扩容失败 &amp; 救砖</h1>
+<p class="note note-danger">
+    此篇为错误示范。前导知识：<br>
+    1. 华为在较新款机型的system分区都使用了自研的erofs文件系统。该系统在设计时就禁止写入，一旦镜像制作完成便无法写入，修改数据只能重新制作镜像。所以，在adb shell里重新挂载system分区对erofs无效。<br>
+    2. 华为的EMUI似乎将系统的部分组件放在了data分区下。自家recovery执行格式化时自然能认识，但第三方rec和fastboot不认。如果你打算继续使用EMUI，<b>不要在第三方工具随手双清</b>，轻则系统bug，重则砖。<br>
+    3. 华为手机除了recovery，还有一个叫eRecovery的系统恢复模式。进入方法：关闭手机，USB线连接电脑（电脑无需操作，保证数据线能传输数据就行），按住电源键+音量上键开机。此模式下，你可以连接wifi热点（仅支持2.4GHz wifi）从服务器下载完整系统包进行系统恢复。刷机刷砖时，可以尝试eRecovery救砖。<br>
+    4. 华为系统的分区表（也许是分区表）储存在一个叫ptable的分区里。华为卡刷包的base包里有ptable.img。<br>
+    5. parted操作分区前要先卸载对应分区。否则可能造成数据损毁。
+</p>
+<p class="note note-danger"> 此扩容方法为错误示范，请勿模仿。</p>
+<p>既然是搞机佬，不刷个第三方系统不舒服啊。</p>
+<p><img src="https://pic.imgdb.cn/item/623a936027f86abb2a5ac314.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>可惜对华为设备的适配ROM少之又少。那怎么办呢？</p>
+<p><img src="https://pic.imgdb.cn/item/623a93c727f86abb2a5c253b.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>Android 8.0引入了一个具有深远意义的功能————Project Treble。</p>
+<p>在了解Project Treble之前，我们先了解一下它出现之前的系统更新流程：</p>
+<ol>
+<li>谷歌把新系统源码推送到AOSP</li>
+<li>芯片制造商（高通等）对源码进行修改，使新系统能在自家芯片上正常工作。</li>
+<li>芯片制造商把修改过的源码下发给OEM，厂商根据自身需求进一步定制。</li>
+<li>OEM对新系统进行测试。测试无误后通过OTA推送给用户。</li>
+</ol>
+<p>但是芯片制造商有时也会碰到一些适配问题，OEM的开发进程有时也偏慢…整个过程花费的时间，导致安卓新版本发布后用户迟迟收不到推送。</p>
+<p>Project Treble出现之前，厂商要对系统进行大量的底层更新、重构以及软件升级等操作，工作量巨大。而且每一版驱动和安卓版本是严格对应的，比如安卓6的驱动，放到安卓7上就无法使用。</p>
+<p>Project Treble的作用就是解除这种限制，允许芯片厂商放出长期兼容的驱动，让它在以后的安卓版本中不经修改也能正常使用。而OEM的工作，就是在这层通用驱动上直接进行定制，缩短了工作量和适配时间。</p>
+<p>随着Project Treble出现的，就是在安卓9及更高版本都适用的通用系统映像（Generic System Image，GSI）。它可以让Android OEM或ROM开发者进行设备测试，也可以让用户提前体验某个还没有进行适配的ROM。（跑的顺不顺利就不知道了）</p>
+<p>这玩意好诶，搞一个玩玩。</p>
+<p><img src="https://pic.imgdb.cn/item/623a9a2d27f86abb2a7770cd.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>啊…这…</p>
+<p>还好提前备份了system_a，重新刷回去，系统正常启动。</p>
+<p>后来进终端看了一下，system_a的大小只有1.8GB左右，而这个GSI有3GB多。</p>
+<p>那得扩容一下system_a啊，就从userdata（即data分区）里分出4G塞给system_a。</p>
+<p>因为我手机没有twrp，而且github上搜不到我手机的设备树，自行编译也编译不了。就从终端里分区罢</p>
+<p><img src="https://pic.imgdb.cn/item/623a9b7427f86abb2a7d4797.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>help还没打出去呢，手机重启了，卡在BL界面了…然后无限重启，进不去系统。</p>
+<p>这还了得，插线，电源键+音量上，进eRecovery恢复系统。起初一切都很顺利，但是…下包下到70%左右时…</p>
+<p style="font-size: 2rem">eRecovery也崩溃重启了！</p>
+<p><img src="https://pic.imgdb.cn/item/623a9cfb27f86abb2a812643.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>是不是哪里不对，把eRecovery搞坏了啊？</p>
+<p>我刷面具之前备份过eRecovery和其它东西，全恢复过去看看</p>
+<p><img src="https://pic.imgdb.cn/item/623a9d9527f86abb2a829e7d.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>恢复完重启，奇迹出现辽————</p>
+<p>eRecovery进不去了</p>
+<p><img src="https://pic.imgdb.cn/item/623a9e1027f86abb2a843d8a.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>重新连电池排线，走麒麟深刷救砖，摆渡下个卡刷包走起。华为的卡刷包没有payload.bin，也没有各种img（除了base包里的ptable.img），所有刷机文件都在update.app里。找个软件提取镜像，fastboot开刷…嗯？</p>
+<p><img src="https://pic.imgdb.cn/item/623a9f0c27f86abb2a8701f8.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>204KB的system，刷个毛线</p>
+<p><img src="https://pic.imgdb.cn/item/623aa58427f86abb2aa198a4.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>但就是在解包的时候，我看见base包里有ptable.img。既然是调整分区把手机调砖了，那恢复一下分区表也许能行…？</p>
+<p><img src="https://pic.imgdb.cn/item/623aa60d27f86abb2aa3e9cd.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>重启之后进eRecovery，提示数据分区损坏严重。低格恢复系统之后手机正常开机，救砖成功</p>
+<p><img src="https://pic.imgdb.cn/item/623aa68727f86abb2aa5ac61.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h1 id="0x04-系统精简-优化-改造"><a class="markdownIt-Anchor" href="#0x04-系统精简-优化-改造"></a> 0x04 系统精简 &amp; 优化 &amp; 改造</h1>
+<p>既然GSI刷不了，那就在原系统上做点改造吧。</p>
+<h2 id="0x041-xposed实现"><a class="markdownIt-Anchor" href="#0x041-xposed实现"></a> 0x04+1   Xposed实现</h2>
+<p>既然装了Magisk，不带个Xposed咋行？Magisk App开启Zygisk，从<a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed/releases/tag/v1.7.2">LSPosed Release</a>界面下个Zygisk版本的LSPosed，App界面刷入，114514岁的老奶奶都会的操作</p>
+<p><img src="https://pic.imgdb.cn/item/623aa7f827f86abb2aac16dc.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>但是在我手机上并没有自动安装LSPosed Manager。如果在你的机型上也没有自动安装管理程序，打开模块压缩包，里面有个manager.apk，手动安装即可。</p>
+<p>为啥不用EdXposed？riru都停更了，用啥EdXp</p>
+<h2 id="0x042-谷歌服务"><a class="markdownIt-Anchor" href="#0x042-谷歌服务"></a> 0x04+2   谷歌服务</h2>
+<p>EMUI是没有内置谷歌框架的。这种情况下装谷歌服务的比较流行的办法是OpenGApps，但考虑到大部分华为机型都没有twrp适配，这里用microG安装。</p>
+<p>按照microg_installer_revived仓库中README的指引，我们要先下载一个修补过的Play商店（<a target="_blank" rel="noopener" href="https://nanolx.org/fdroid/repo/Phonesky_132.apk">点我下载</a>），然后把它放到/data/adb/Phonesky.apk。这一步最好不要用adb操作，adb似乎无权操作/data目录。建议用各种文件管理器进行复制，或者用Termux之类的终端模拟器进行操作。</p>
+<p>放好Play商店之后，在<a target="_blank" rel="noopener" href="https://github.com/nift4/microg_installer_revived/releases/tag/v2.6.2-0">Release界面</a>下载最新版的Magisk模块，App刷入即可。这个模块似乎不会自动安装microG Service Proxy，你还要<a target="_blank" rel="noopener" href="https://microg.org/download.html">去官网</a>手动安装一下。</p>
+<p>安装完Magisk模块，我们还要对microG进行签名伪造，否则其它应用程序不认。</p>
+<p>在Xposed Repo界面<a target="_blank" rel="noopener" href="https://repo.xposed.info/module/com.thermatk.android.xf.fakegapps">下载FakeGApps</a>，LSPosed中启用，安装，定义域设置为系统框架。</p>
+<p><img src="https://pic.imgdb.cn/item/623aab5927f86abb2abbaf3b.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>对了，LSPosed不像EdXposed一样默认全局作用域，你每装一个模块都要手动设置它的作用域。不支持一键全选。</p>
+<p>重启手机之后，打开桌面上的microG Settings里的Self-Check，所有选项都打勾就证明配置正确。如果有权限问题（开头是Permission的那些），点一下授权就好了。</p>
+<p><img src="https://pic.imgdb.cn/item/623aac0527f86abb2abef2c9.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>退回软件界面，点Add Google Account，登录谷歌账号就能用谷歌服务了。记得魔法上网。</p>
+<h2 id="0x043-淦华为桌面"><a class="markdownIt-Anchor" href="#0x043-淦华为桌面"></a> 0x04+3   淦！华为桌面！</h2>
+<p>总是感觉EMUI自带的桌面不太好看，想装一个第三方桌面，但是选择默认程序的时候，桌面那一项只有华为桌面。后来去摆渡一查，原来是EMUI9为“改善手机体验保护用户的权益，不再让<strong>劣质</strong>第三方桌面为非作歹”，禁止了<strong>所有</strong>第三方桌面的使用。</p>
+<p>那，用万能的adb处理一下？</p>
+<p><img src="https://pic.imgdb.cn/item/623aad3b27f86abb2ac43fe7.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="https://pic.imgdb.cn/item/623aae8f27f86abb2aca6d6e.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="https://pic.imgdb.cn/item/623aaed327f86abb2acbacfc.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>pm指令所有和应用停用/启用（包括suspend，hide，disable-user这些）的操作我都试过了，竟没有一个起作用</p>
+<p><img src="https://pic.imgdb.cn/item/623aaf5227f86abb2acda268.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>那，动点粗，也就是说把system重挂载为rw，然后把/system/app中华为桌面对应的安装包删掉？</p>
+<p>别想了，system分区是erofs</p>
+<p><img src="https://pic.imgdb.cn/item/623aafdc27f86abb2ad00c24.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>但是，动不了system分区，我们有Magisk啊！</p>
+<p>Magisk的原理是，在系统启动时挂载自己的镜像，构建出了一个在system分区基础上能够自由添加、删除、修改的“平行空间”，所有操作都在系统启动时完成，没有对system进行任何修改。我们做个Magisk模块把华为桌面删掉，不就相当于把华为桌面移出/system了吗？</p>
+<p>依照<a target="_blank" rel="noopener" href="https://topjohnwu.github.io/Magisk/guides.html">Magisk官方开发指南</a>，module.prop内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">id=FxxkHWLauncher<br>name=淦！华为桌面！<br>version=NoOneCares<br>versionCode=1<br>author=LtD0gE<br>description=淦！华为桌面！<br></code></pre></td></tr></table></figure>
+<p>然后在module.prop所在目录创建以下目录结构：</p>
+<p><img src="https://pic.imgdb.cn/item/623ab43727f86abb2ae17d43.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>其中HwLauncher6.apk为空文件。</p>
+<p>把module.prop和system文件夹打包成zip，Magisk刷入即可屏蔽华为桌面。</p>
+<p class="note note-warning">刷写前一定 一定 一定 记得提前安装好一个第三方桌面！！！</p>
+<p>刷写完成后重启手机，即可进入第三方桌面。这里我选择年度最佳Android / iOS应用开发商（？）微软推出的微软桌面。</p>
+<h2 id="0x044-系统精简"><a class="markdownIt-Anchor" href="#0x044-系统精简"></a> 0x04+4 系统精简</h2>
+<p>原版EMUI是带了像花粉俱乐部，华为商城、智能搜索这些预装应用的，我日常生活中用不到，但它又时不时推点广告，用root精简掉。</p>
+<p>adb指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb shell pm uninstall --user 0 &lt;应用包名&gt;<br><span class="hljs-comment">#如adb shell pm uninstall --user 0 com.huawei.browser卸载华为浏览器，你家浏览器连打开GitHub都有渲染问题</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/623ab65b27f86abb2aea7cd3.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h1 id="0x05"><a class="markdownIt-Anchor" href="#0x05"></a> 0x05</h1>
+<p>搞完记得弄点双面胶把手机后盖粘起来，靠你吹后盖留下的那点胶打会原神就烧开胶了</p>
+<p>不粘也无所谓，套个透明手机壳当个探索版后盖也不错</p>
+<p>此外还可以装Scene，Konabess（麒麟平台无效）之类的软件超超频，干干温控啥的，有root权限👴就是老大，👴想怎么着就怎么着.jpg</p>
+<p>小垃圾花了好几天时间淦华为出了篇文章，欢迎各位dalao指导 / 纠正 <s>/嘲笑</s></p>
+<p><img src="https://pic.imgdb.cn/item/623ab80527f86abb2af20770.jpg" srcset="/img/loading.gif" lazyload alt="" /></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/04/%E4%BD%BF%E7%94%A8github%E4%B8%8Ehexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+                        <span class="hidden-mobile">使用GitHub与Hexo搭建静态博客</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"IUrJ5OGytvM27pdObtejXoxH-MdYXbMMI","appKey":"xSLUs4uIXEX5nsgnJcgSpDuu","path":"window.location.pathname","placeholder":"Type some texts here...","avatar":"retro","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":false,"serverURLs":"https://iurj5ogy.api.lncldglobal.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a><br> Generated via <a href="https://github.com/LtD0gE/LtD0gE-hexo-ci-cd" target="_blank" rel="nofollow noopener">Github Actions</a><br> <br> 
+  </div>
+  
+
+  
+
+  
+  <div id="aplayer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <style>
+    span.aplayer-list-cur, span.aplayer-list-index, span.aplayer-list-title, span.aplayer-title, span.aplayer-author{
+      float: left;
+      color: #666;
+    }
+  </style>
+  <meting-js
+	  server="tencent"
+	  type="playlist"
+	  id="8344822636"
+    fixed="true"
+    loop="all"
+    order="list"
+    preload="auto"
+    mutex="true"
+    list-folded="true">
+</meting-js>
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    function slogan(window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
