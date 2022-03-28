@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>做了个JSDelivr反代</title>
+      <link href="/2022/03/28/%E5%81%9A%E4%BA%86%E4%B8%AAjsdelivr%E5%8F%8D%E4%BB%A3/"/>
+      <url>/2022/03/28/%E5%81%9A%E4%BA%86%E4%B8%AAjsdelivr%E5%8F%8D%E4%BB%A3/</url>
+      
+        <content type="html"><![CDATA[<p>JSDelivr因ICP执照被吊销，国内访问被迫转全球线路已经有一段时间了，JSDelivr在国内的访问体验一直不好。</p><p>我做了个JSDelivr反代，访问速度上有明显提升。</p><p>反代域名：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs text">jsdrp.ltdoge.top<br>jsdrp.vercel.app<br></code></pre></td></tr></table></figure><p>两个域名没什么区别，想用哪个用哪个，<a href="http://xn--cdn-ns9dr8t104ag5x.jsdelivr.net">反代的是cdn.jsdelivr.net</a>。使用时直接替换域名即可。比如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js<br></code></pre></td></tr></table></figure><p>可以用以下两个url替换，二选一：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">https://jsdrp.ltdoge.top/npm/jquery@3.2.1/dist/jquery.min.js<br>https://jsdrp.vercel.app/npm/jquery@3.2.1/dist/jquery.min.js<br></code></pre></td></tr></table></figure><p>稳定不跑路。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>华为搞机佬の充实亿天</title>
       <link href="/2022/03/23/%E5%8D%8E%E4%B8%BA%E6%90%9E%E6%9C%BA%E4%BD%AC%E3%81%AE%E5%85%85%E5%AE%9E%E4%BA%BF%E5%A4%A9/"/>
       <url>/2022/03/23/%E5%8D%8E%E4%B8%BA%E6%90%9E%E6%9C%BA%E4%BD%AC%E3%81%AE%E5%85%85%E5%AE%9E%E4%BA%BF%E5%A4%A9/</url>
